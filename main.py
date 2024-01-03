@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def plot_line_charts():
-    # line plots
     stock_df.plot(x = 'Date', y = ['NFLX', 'FB'],  figsize = (15, 10), linewidth = 3) 
     plt.ylabel('Price ($)')
     plt.xlabel('Date')
@@ -13,7 +12,6 @@ def plot_line_charts():
     plt.show()
 
 def plot_scatter_plot():
-    # scatter plot
     X = daily_return_df['FB']
     Y = daily_return_df['NFLX']
     plt.figure(figsize = (15, 10))
@@ -22,7 +20,6 @@ def plot_scatter_plot():
     plt.show()
 
 def plot_pie_chart():
-    # pie chart
     values = [20, 55, 5, 17, 3]
     colors = ['g', 'r', 'y', 'b', 'm']
     explode = [0, 0, 0, 0, 0.2]
@@ -52,7 +49,7 @@ if __name__ == '__main__':
     daily_return_df = pd.read_csv('data/stocks_daily_returns.csv')
 
     plot_line_charts()
-    # plot_scatter_plot()
-    # plot_pie_chart()
-    # plot_histogram()
+    plot_scatter_plot()
+    plot_pie_chart()
+    plot_histogram()
     
