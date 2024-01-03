@@ -41,8 +41,6 @@ def plot_histogram():
     plt.title('Histogram: mu = ' + str(mu) + ' sd = ' + str(sigma))
     plt.show()
 
-
-
 if __name__ == '__main__':
     # read data
     stock_df = pd.read_csv('data/stock_data.csv')
