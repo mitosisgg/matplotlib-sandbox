@@ -4,22 +4,10 @@ import pandas as pd
 
 def plot_line_charts():
     # line plots
-    stock_df.plot(x = 'Date', y = 'FB', label = 'FB',  figsize = (15, 10), linewidth = 3) 
+    stock_df.plot(x = 'Date', y = ['NFLX', 'FB'],  figsize = (15, 10), linewidth = 3) 
     plt.ylabel('Price ($)')
     plt.xlabel('Date')
-    plt.title('Stock Price')
-    plt.grid()
-
-    stock_df.plot(x = 'Date', y = 'NFLX', label = 'NFLX',  figsize = (15, 10), linewidth = 3, color = 'red') 
-    plt.ylabel('Price ($)')
-    plt.xlabel('Date')
-    plt.title('Stock Price')
-    plt.grid()
-
-    stock_df.plot(x = 'Date', y = 'TWTR', label = 'TWTR',  figsize = (15, 10), linewidth = 3, color = 'green') 
-    plt.ylabel('Price ($)')
-    plt.xlabel('Date')
-    plt.title('Stock Price')
+    plt.title('Stock Prices')
     plt.grid()
 
     plt.show()
@@ -63,7 +51,7 @@ if __name__ == '__main__':
     stock_df = pd.read_csv('stock_data.csv')
     daily_return_df = pd.read_csv('stocks_daily_returns.csv')
 
-    # plot_line_charts()
+    plot_line_charts()
     # plot_scatter_plot()
     # plot_pie_chart()
     # plot_histogram()
