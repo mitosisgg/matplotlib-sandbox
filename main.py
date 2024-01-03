@@ -48,8 +48,8 @@ def plot_histogram():
 
 if __name__ == '__main__':
     # read data
-    stock_df = pd.read_csv('stock_data.csv')
-    daily_return_df = pd.read_csv('stocks_daily_returns.csv')
+    stock_df = pd.read_csv('data/stock_data.csv')
+    daily_return_df = pd.read_csv('data/stocks_daily_returns.csv')
 
     plot_line_charts()
     # plot_scatter_plot()
